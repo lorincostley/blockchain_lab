@@ -41,7 +41,7 @@ namespace blockchain_lab
                 Block currentBlock = this.Chain[i];
                 Block previousBlock = this.Chain[i - 1];
 
-                if (currentBlock.Hash == currentBlock.CalculateHash())
+                if (currentBlock.Hash != currentBlock.CalculateHash())
                 {
                     return false;
                 }
